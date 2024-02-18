@@ -42,7 +42,7 @@ const Register = () => {
     teammember2: '',
     teammember3: '',
     is_team_event: false,
-    payment_screenshot: '',
+    // payment_screenshot: '',
   });
 
   const [fees, setFees] = useState(0);
@@ -137,8 +137,8 @@ const Register = () => {
       data.contact.length < 1 ||
       data.college_name.length < 1 ||
       data.college_department.length < 1 ||
-      data.payment_id.length < 1 ||
-      data.payment_screenshot.length < 1
+      data.payment_id.length < 1
+      // data.payment_screenshot.length < 1
     ) {
       notifyError('Please fill all required fields');
       setLoading(false);
@@ -161,14 +161,15 @@ const Register = () => {
       formData.append('payment_id', data.payment_id);
       formData.append('team_members', team);
       formData.append('is_team_event', false);
-      formData.append('payment_screenshot', data.payment_screenshot);
+      // // formData.append('payment_screenshot', data.payment_screenshot);
 
       try {
         console.log(
-          `${process.env.REACT_APP_FLASK_BACKEND}/api/auth/register`
+          `http://127.0.0.1:8000/register/`
         );
         const response = await axios.post(
-          `${process.env.REACT_APP_FLASK_BACKEND}/api/auth/register`,
+          // `${process.env.REACT_APP_FLASK_BACKEND}/api/auth/register`,
+          `http://127.0.0.1:8000/register/`,
           formData,
           {
             headers: {
@@ -193,7 +194,7 @@ const Register = () => {
           teammember2: '',
           teammember3: '',
           is_team_event: false,
-          payment_screenshot: '',
+          // payment_screenshot: '',
         });
       } catch (error) {
         notifyError(
@@ -232,11 +233,12 @@ const Register = () => {
       formData.append('payment_id', data.payment_id);
       formData.append('team_members', team);
       formData.append('is_team_event', true);
-      formData.append('payment_screenshot', data.payment_screenshot);
+      // // formData.append('payment_screenshot', data.payment_screenshot);
 
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_FLASK_BACKEND}/api/auth/register`,
+          // `${process.env.REACT_APP_FLASK_BACKEND}/api/auth/register`,
+          `http://127.0.0.1:8000/register/`,
           formData,
           {
             headers: {
@@ -261,7 +263,7 @@ const Register = () => {
           teammember2: '',
           teammember3: '',
           is_team_event: false,
-          payment_screenshot: '',
+          // payment_screenshot: '',
         });
       } catch (error) {
         notifyError(
@@ -400,58 +402,58 @@ const Register = () => {
         {(data.event_name === 'Hackathon' ||
           data.event_name === 'Escape Room' ||
           data.event_name === 'Design-X') && (
-          <>
-            <div className={styles.row1}>
-              <div className={styles.floatinglabelgroup}>
-                <input
-                  type="text"
-                  id="teammember1"
-                  className={styles.formcontrol}
-                  onChange={(e) =>
-                    setData({ ...data, teammember1: e.target.value })
-                  }
-                />
-                <label className={styles.floatinglabel} htmlFor="teammember1">
-                  Team member
-                </label>
-              </div>
-            </div>
-            <div className={styles.row1}>
-              <div className={styles.floatinglabelgroup}>
-                <input
-                  type="text"
-                  id="teammember2"
-                  className={styles.formcontrol}
-                  onChange={(e) =>
-                    setData({ ...data, teammember2: e.target.value })
-                  }
-                />
-                <label className={styles.floatinglabel} htmlFor="teammember2">
-                  Team member
-                </label>
-              </div>
-            </div>
-            {data.event_name !== 'Design-X' && (
+            <>
               <div className={styles.row1}>
                 <div className={styles.floatinglabelgroup}>
                   <input
                     type="text"
-                    id="teammember3"
+                    id="teammember1"
                     className={styles.formcontrol}
                     onChange={(e) =>
-                      setData({ ...data, teammember3: e.target.value })
+                      setData({ ...data, teammember1: e.target.value })
                     }
                   />
-                  <label
-                    className={styles.floatinglabel}
-                    htmlFor="teammember3">
+                  <label className={styles.floatinglabel} htmlFor="teammember1">
                     Team member
                   </label>
                 </div>
               </div>
-            )}
-          </>
-        )}
+              <div className={styles.row1}>
+                <div className={styles.floatinglabelgroup}>
+                  <input
+                    type="text"
+                    id="teammember2"
+                    className={styles.formcontrol}
+                    onChange={(e) =>
+                      setData({ ...data, teammember2: e.target.value })
+                    }
+                  />
+                  <label className={styles.floatinglabel} htmlFor="teammember2">
+                    Team member
+                  </label>
+                </div>
+              </div>
+              {data.event_name !== 'Design-X' && (
+                <div className={styles.row1}>
+                  <div className={styles.floatinglabelgroup}>
+                    <input
+                      type="text"
+                      id="teammember3"
+                      className={styles.formcontrol}
+                      onChange={(e) =>
+                        setData({ ...data, teammember3: e.target.value })
+                      }
+                    />
+                    <label
+                      className={styles.floatinglabel}
+                      htmlFor="teammember3">
+                      Team member
+                    </label>
+                  </div>
+                </div>
+              )}
+            </>
+          )}
         <div className={styles.row1}>
           <div className={styles.floatinglabelgroup}>
             <input
@@ -473,9 +475,9 @@ const Register = () => {
           <input
             type="file"
             id="paymentscreenshot"
-            onChange={(e) =>
-              setData({ ...data, payment_screenshot: e.target.files[0] })
-            }
+          // onChange={(e) =>
+          //   // setData({ ...data, payment_screenshot: e.target.files[0] })
+          // }
           />
           <label className={styles.floatinglabel} htmlFor="paymentscreenshot">
             Payment screenshot <span>*</span>
