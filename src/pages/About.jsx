@@ -47,19 +47,33 @@ const About = () => {
         <div data-aos="fade-right">
           <h4>ABOUT MPULSE IGNITE</h4>
           <p>
-            Ignite is a Tech Fest held by the IT Department of Modern College.
-            Every year we organize events like Mock Placements, Clash of Coders,
-            Hackathons, and likewise with the aim of enhancing and nurturing the
-            technical skills that will provide them the platform to empower
-            students to develop and achieve their personal and career potential.
-            The initiation of Ignite signified the beginning of the formation of
-            new ideas Ignite receives 300+ participants every year with students
-            participating from most of the colleges in Pune. Thus we make sure
-            that every student gets an opportunity to showcase their talent and
-            technical skills. Every year M-Pulse Ignite is sponsored by top
-            companies and institutions the new edition of Ignite, the Ignite
-            2k24 will provide many new opportunities and ignite the young minds
-            to innovate we invite you to join us and share the experience!
+            Ignite is a Tech Fest held by IT Department of Modern college. Every
+            year we organize events like Mock Placements, Clash of coders,
+            Weber, and likewise with the only aim to enhance and nurture the
+            technical skills which will provide them the platform to empowering
+            students to develop and achieve their personal and career
+            potentials. The initiation of Ignite signified the beginning of
+            formation of new ideas Ignite recieves 300+ participants every year
+            with students participating from most of the colleges in pune. thus
+            we make sure that every student gets an opportunity to showcase
+            their talent and technical skills. Every year M-Pulse Ignite is
+            sponsored by top companies and institutions the new edition of
+            Ignite, the Ignite 2K24 will provide many new opportunities and
+            ignite the young minds to innovate we invite you to join us and
+            share the experience! Ignite is a Tech Fest held by the IT
+            Department of Modern College. Every year we organize events like
+            Mock Placements, Clash of Coders, Hackathons, and likewise with the
+            aim of enhancing and nurturing the technical skills that will
+            provide them the platform to empower students to develop and achieve
+            their personal and career potential. The initiation of Ignite
+            signified the beginning of the formation of new ideas Ignite
+            receives 300+ participants every year with students participating
+            from most of the colleges in Pune. Thus we make sure that every
+            student gets an opportunity to showcase their talent and technical
+            skills. Every year M-Pulse Ignite is sponsored by top companies and
+            institutions the new edition of Ignite, the Ignite 2k24 will provide
+            many new opportunities and ignite the young minds to innovate we
+            invite you to join us and share the experience!
           </p>
         </div>
         <img src="/ignite-logo.png" alt="ignite-logo" data-aos="fade-left" />
